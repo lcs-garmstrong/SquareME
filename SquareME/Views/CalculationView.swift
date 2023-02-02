@@ -15,7 +15,19 @@ struct CalculationView: View {
     
     //MARK: Computed properties
     
+    // Convert the input given into an optional double.
     
+    
+    var inputGivenAsOptionalDouble: Double? {
+        
+        // attempt to creat optional double
+        guard let inputGivenAsDouble = Double(inputGiven) else {
+            return nil
+        }
+        
+        // we have an actual double, so return in
+        return inputGivenAsDouble
+    }
     
     var body: some View {
         
